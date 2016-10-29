@@ -6,7 +6,7 @@ gem 'faker',                   '1.6.3'
 gem 'will_paginate',           '3.1.0'
 gem 'bootstrap-will_paginate', '0.0.10'
 gem 'bootstrap-sass',          '3.3.6'
-gem 'puma',                    '3.4.0'
+
 gem 'sass-rails',              '5.0.6'
 gem 'uglifier',                '3.0.0'
 gem 'coffee-rails',            '4.2.1'
@@ -35,6 +35,7 @@ end
 
 group :production do
    gem 'pg',   '0.18.4'
+   gem 'puma',                    '3.4.0'
   gem 'rails_12factor'
 end
 
