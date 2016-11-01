@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-    
+
     root                'static_pages#home'
-    
+
     get    'help'    => 'static_pages#help'
     get    'about'   => 'static_pages#about'
     get    'aboutus' => 'static_pages#aboutus'
     get    'contact' => 'static_pages#contact'
-    
+
     get    'allergyimmunology'   => 'static_pages#allergyimmunology'
     get    'anatomicpathology' => 'static_pages#anatomicpathology'
     get    'anatomicclinicalpathology' => 'static_pages#anatomicclinicalpathology'
@@ -91,15 +91,17 @@ Rails.application.routes.draw do
     get    'transplanthepatology' => 'static_pages#transplanthepatology'
     get    'urology' => 'static_pages#urology'
     get    'vascularsurgery' => 'static_pages#vascularsurgery'
-    
+
     get    'signup'  => 'users#new'
     get    'login'   => 'sessions#new'
     post   'login'   => 'sessions#create'
     delete 'logout'  => 'sessions#destroy'
-    
+
     get    'userappointment' => 'users#appointment'
+
+    get    'usersearchresults' => 'users#searchresult'
     get    'userdatabase' => 'users#database'
-    
+
     get 'admin_page' => 'users#admin_page'
     get 'doctor_page' => 'users#doctor_page'
     get 'office_page' => 'users#office_page'
@@ -108,5 +110,6 @@ Rails.application.routes.draw do
     resources :users
     resources :account_activations, only: [:edit]
     resources :password_resets,     only: [:new, :create, :edit, :update]
+
 
 end

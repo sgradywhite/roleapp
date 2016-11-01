@@ -1,22 +1,53 @@
 <% provide(:title, "Make an appointment") %>
 <html>
-    
+
     <ul class="nav navbar-nav navbar-right">
         </ul>
     <body>
         <h1 style = "margin-top: 0px;">This is an Make an Appointment Page</h1>
         <div class = "invisibleblock"></div>
-        <div  class = "appointmentframe"> 
-        <div class = "appointmentheader">
-        <li>Find a Doctor</li>
-        <li>What specaity:</li>
-       
+        <div  class = "appointmentframe">
+
+         
+
+         
+
+
+          <form>
+                Doctor name:<br>
+                <select name="doctor_id" id="doctor_id" style= "width: 20%">
+                  <option value="1">Doctor Name 1</option></option>
+                  <option value="2">Doctor Name 2</option>
+                  <option value="3">Doctor Name 3</option>
+              </select>
+              <div></div>
+                Specialty:<br>
+                <select name="specialty_id" id="specialty_id" style= "width: 20%">
+          <option value="1">Allergy</option>
+          <option value="2">Bones</option>
+          <option value="3">Therapy</option>
+          </select>
+          </form>
+
+          <div class = "btnSignUp" >
+          <%= link_to "Search!", usersearchresults_path, class: "btn btn-lg btn-primary" %>
+          </div>
+
+
+
+
+            </div>
+
+
+
+
+
+
+
         </div>
-        
-        </div>
-        
+
     </body>
-    
-    
-    
+
+
+
 </html>
